@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Feedback Form
+        </title>
+
+       <link href="CSS.css" rel="stylesheet" />
+    </head>
+
+        <script type="text/javascript">
+            function confirm_email() {
+                var email = document.getElementById(document.Registration.Email).value;
+                var re_email = document.getElementById(document.Registration.Email_2).value;
+                if (email != re_email)
+                    
+                    document.alert("ERROR: Email addresses must match");
+            }
+
+        </script>
+
+    <script type="text/javascript">
+
+        function validate_comment() {
+            var comment = document.getElementById("Comment");
+            if (comment == null) {
+                window.alert("ERROR: The Comment box cannot be empty").value;      
+            }
+        }
+
+        function submit() {
+            document.forms[Feedback].submit();
+        }
+
+    </script>
+    <body class="feedback">
+
+    <form name="Feedback">
+    
+
+        <h1>Feedback Form</h1>
+        
+        <table>
+
+            <tr>
+                <td>Email: </td>
+
+                <td><input type="text" id="Email" name="Email" size="40" onsubmit="javascript: confirm_email();"/></td>
+
+            </tr>
+            <tr>   
+                <td>Confirm Email: </td>
+                <td><input type="text" id="Email_2" name="Email_2" size="40" onsubmit="javascript: confirm_email();" /></td>
+           </tr>
+        <tr>
+            <td> Comments: </td>
+            <td><input type="text" id="Comment" name="Comment" size="40" onsubmit="javascript: validate_comment();"/></td>
+       </tr>
+    </table>
+
+       <input type="submit" value="Submit" onsubmit="javascript: validate_comment(); confirm_email(); submit();"/>
+        
+       
+        <div class="linkList">
+        <p>
+            <a href="Index.html"> Home </a> <br />
+            <a href="FAQ.html" > FAQ </a> <br />
+            <a href="Registration.html"> Registration </a> <br />
+        </p>
+        </div>
+
+    
+        </form>
+        </body>
+</html>

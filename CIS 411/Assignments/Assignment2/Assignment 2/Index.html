@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>  
+  
+<head>  
+     <link href="CSS.css" rel="stylesheet" />
+
+<title>Assignment 2 - Calculator</title>  
+   
+  
+<script lang="javascript" type="text/javascript">  
+function multiply(){  
+    a=Number(document.calculator.Text_Area.value);  
+    b=Number(document.calculator.Text_Area.value);  
+c=a*b;  
+document.calculator.Text_Area.value = c;
+}  
+</script>  
+ 
+
+    <script lang="javascript" type="text/javascript">  
+        function equals(){
+            secondNum   = document.getElementById("fnumtext").value;
+            alert(secondNum+operation);
+            if(document.getElementById("operation").value   ==  "+"){
+                var x = parseInt(fnum)+parseInt(secondNum);
+                alert(x);
+            }else if(document.getElementById("operation").value ==  "-"){
+                var x = parseInt(fnum)-parseInt(secondNum);
+                alert(x);
+            }else if(document.getElementById("operation").value ==  "*"){
+                var x = parseInt(fnum)*parseInt(secondNum);
+                alert(x);
+            }else if(document.getElementById("operation").value ==  "/"){
+                var x = parseInt(fnum)/parseInt(secondNum);
+                alert(x);
+            }else{
+                alert("choose some Operation");
+            }
+        }
+</script>  
+
+
+  
+<script lang="javascript" type="text/javascript">  
+function subtraction(){  
+    a=Number(document.calculator.Text_Area.value);  
+    b=Number(document.calculator.Text_Area.value);  
+c=a-b;  
+document.calculator.Text_Area.value = c;
+}  
+</script>  
+  
+<script lang="javascript" type="text/javascript">  
+function division(){  
+    a = Number(document.calculator.Text_Area.value);
+    b = Number(document.calculator.Text_Area.value);
+c=a/b;  
+document.calculator.Text_Area.value = c;
+}  
+</script>  
+  
+
+<script lang="javascript" type="text/javascript">
+    function display(num) {
+  
+        if (document.calculator.Text_Area.value == 0 || document.calculator.Text_Area.value == null){
+            return document.calculator.Text_Area.value = num;
+        }
+        else { return document.calculator.Text_Area.value = document.calculator.Text_Area.value + num; }
+    }
+          </script>  
+                                                     
+     <style type="text/css">
+         .auto-style2 {
+             width: 15%;
+             height: 100%;
+         }
+         .auto-style3 {
+             height: 69px;
+         }
+     </style>
+                                                     
+</head>  
+  
+<body>
+    <h3>Calculator</h3>
+  
+<FORM name="calculator">  
+
+<table class="Calc">
+
+<tr >
+    <td colspan="4" class="auto-style3">
+        <input class="calc_result" type="text" name="Text_Area" style="width: 290px;"> 
+   </td>
+</tr>
+
+<tr>
+    
+    <td class="calc_td_btn">
+        <input class="calc_btn" type="button" value="C" onclick="document.calculator.Text_Area.value = ''"> 
+    </td>
+    <td class="calc_td_btn">
+        <input class="calc_btn" type="button" value="+/-" onclick="document.calculator.Text_Area.value += ' - '" > 
+        </td>
+
+    <td class="calc_td_btn">
+        <input class="calc_btn" type="button" value="%" onclick="document.calculator.Text_Area.value += ' % '" >
+    </td>
+</tr>
+
+    <tr>
+        <td class="auto-style2">
+            <input class="calc_btn" type="button" name="seven" value="7" onclick="javascript: display(7);"> 
+        </td>
+
+        <td class="calc_td_btn"> 
+            <input class="calc_btn" type="button" name="eight" value="8" onclick="javascript: display(8);">  
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="nine" value="9" onclick="javascript: display(9);"> 
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" value="&divide;" onclick="document.calculator.Text_Area.value += ' / '">  
+        </td>
+    </tr>
+
+    <tr>
+        <td class="auto-style2">
+            <input class="calc_btn" type="button" name="four" value="4" onclick="javascript: display(4);"> 
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="five" value="5" onclick="javascript: display(5);">  
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="six" value="6" onclick="javascript: display(6);">  
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" value="*" onclick="document.calculator.Text_Area.value += ' * '">  
+        </td>
+    </tr>
+
+    <tr>
+        <td class="auto-style2"> 
+            <input class="calc_btn" type="button" name="one" value="1" onclick="javascript: display(1);">  
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="two" value="2" onclick="javascript: display(2);">  
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="three" value="3" onclick="javascript: display(3);">  
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" value="-" onclick="document.calculator.Text_Area.value += ' - '">  
+        </td>
+    </tr>
+
+    <tr>
+        <td class="auto-style2">
+            <input class="calc_btn" type="button" name="zero" value="0" onclick="javascript: display(0);"> 
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="Decimal" value="." onclick="document.calculator.Text_Area.value += '.'"> 
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" name="equals" value="=" OnClick="document.calculator.Text_Area.value = eval(document.calculator.Text_Area.value)"> 
+        </td>
+
+        <td class="calc_td_btn">
+            <input class="calc_btn" type="button" value="+" onclick="document.calculator.Text_Area.value += ' + '">  
+        </td>
+    </tr>
+
+
+</table>
+  
+  
+<br />
+    <div class="linkList">
+        <p>
+    <a href="FAQ.html" > FAQ </a> <br />
+    <a href="Feedback_Form.html"> Feedback Page </a> <br />
+    <a href="Registration.html"> Registration </a> <br />
+        </p>
+        </div>
+
+        
+  
+</FORM>  
+        
+</body>  
+</html>  

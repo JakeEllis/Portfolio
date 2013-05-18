@@ -1,0 +1,15 @@
+﻿body {
+    background-color:lightblue;
+}
+
+h1 {
+    color:black;
+    
+}
+
+#display {
+    border:thick;
+    border-color:black;
+    column-span:inherit;
+
+}

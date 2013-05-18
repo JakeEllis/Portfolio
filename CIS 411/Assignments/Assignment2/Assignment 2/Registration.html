@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            Regristration
+        </title>
+
+        <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+         <link href="CSS.css" rel="stylesheet" />
+
+    
+
+   <script type="text/javascript">
+
+        function confirm_FirstName() {
+            var name = document.getElementById(document.Registration.FirstName).value;
+            if (name == null)
+                document.alert("ERROR: First Name cannot be Null!");
+        }
+   
+
+   
+         function confirm_LastName() {
+             var name = document.getElementById(document.Registration.LastName).value;
+             if (name == null)
+                 document.alert("ERROR: Last Name cannot be empty!");
+         }
+   
+    
+   
+        function confirm_email() {
+            var email = document.getElementById(document.Registration.email).value;
+            if (email == null)
+                document.alert("ERROR: Email address cannot be empty!");
+        }
+ 
+
+        function confirm_phone() {
+            var phone = document.getElementById(document.Registration.Phone).value;
+            if (phone == null)
+                document.alert("ERROR: Phone number cannot be empty!");
+        }
+  
+
+        function validate_comment() {
+            var comment = document.getElementById(document.Registration.Comment).value;
+            if (comment == null) {
+                document.alert("ERROR: The Comment box cannot be empty");
+            }
+        }
+
+    </script>
+
+        </head>
+
+    <body>
+        <form name="Registration">
+        <h1>Registration</h1>
+
+            <table>
+
+                <tr>
+           <td class="reg">First Name: </td> 
+                    <td class="reg"><input type="text" id="FirstName" size="20" /></td>
+                </tr>
+
+                <tr>
+        <td class="reg">Last Name: </td>
+                    <td class="reg"><input type ="text" id="LastName" size="20" /> </td>
+                </tr>
+
+                <tr>
+       <td class="reg">Email: </td>
+                    <td class="reg"><input type="text" id="Email" size="20" /> </td>
+                </tr>
+
+                <tr>
+        <td class="reg">Phone: </td>
+                    <td class="reg"><input type="text" id="Phone" size="20" /> </td>
+                </tr>
+
+                <tr>
+                <td class="reg">  How did you find us? </td>
+                <td class="reg"><input type="text" id="Comment" size="40" onsubmit="validate_comment();"/></td>
+                </tr>
+    
+                </table>
+
+       <input type="submit" value="Submit" onsubmit="validate_comment(); confirm_email(); confirm_FirstName(); confirm_LastName(); confirm_phone()"; />  
+
+
+        <div class="linkList">
+        <p>
+            <a href="Index.html" > Home </a> <br />
+    <a href="FAQ.html" > FAQ </a> <br />
+    <a href="Feedback_Form.html"> Feedback Page </a> <br />
+    
+        </p>
+        </div>
+            </form>
+    </body>
+
+
+</html>

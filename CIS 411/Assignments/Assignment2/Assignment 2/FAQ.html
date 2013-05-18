@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Frequently Asked Questions</title>
+
+ <link href="CSS.css" rel="stylesheet" />
+
+    </head>
+
+      <script lang=javascript type="text/javascript">
+
+          var questions = ["Question 1: How do you sort a list of FAQ? <br> ",
+              "Question 2: <br> ",
+              "Question 3: <br> ",
+              "Question 4: <br> ",
+              "Question 5:  <br>",
+              "Question 6: <br>",
+              "Question 7: <br>",
+              "Question 8: <br>",
+              "Question 9: <br>",
+              "Question 10: <br>"];
+
+          var answers = [" I think you use a JSON array of some kind but I couldnt get it working properly!!! <br>",
+              "Answer 2 <br>",
+              "Answer 3 <br>",
+              "Answer 4 <br>",
+              "Answer 5 <br>",
+              "Answer 6 <br> ",
+              "Answer 7  <br>",
+              "Answer 8 <br>",
+              "Answer 9 <br>",
+              "Answer 10 "];
+
+          
+          function search() {
+              if (document.faq.searchBox !== null || document.faq.searchBox !== '') {
+                  for (var i = 0; i < 10; i++) {
+                      document.write(questions[i] + " " + answers[i] + "<br>");
+                  }
+              }
+          }
+
+    </script> 
+
+ <body class="faq">
+
+     <h1>Frequently Asked Questions</h1>
+
+            <form name="faq">
+                    Keyword(s): <input type="text" name="keyword" >
+                    <input type="button" value="Search" onclick="search();">
+            
+
+        <div class="linkList">
+        <p>
+    <a href="Index.html" > Home </a> <br />
+    <a href="Feedback_Form.html"> Feedback Page </a> <br />
+    <a href="Registration.html"> Registration </a> <br />
+        </p>
+        </div>
+          </form>
+</body>
+      
+</html>
+

@@ -1,0 +1,48 @@
+﻿@model Assignment7.Models.Assignment7Model
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">        
+
+        @*This code below does work and I dont know why. According to everything I have read this is the proper technique*@
+        $(document).ready(function getUrl() {
+            var URL = $("#JSON_URL").val();
+
+            $.ajax({
+                Url: URL,
+                Type: "GET",
+                datatype: "json",
+                success: function (data) {
+                    $("#Result").html(data);
+                },
+             
+            });
+
+            $("#URL_Submit").click(function(){
+                getUrl();
+            })
+
+        });
+
+    </script>
+  
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            </div>
+        <div class="Result">
+            @Html.LabelFor(model => model.Url)  
+@Html.TextBoxFor(model => model.Url)
+    <input type="submit" id="URL_Submit" name="button" />
+
+
+@Html.Partial("_Results",Model)
+        </div>
+
+    </section>
+}

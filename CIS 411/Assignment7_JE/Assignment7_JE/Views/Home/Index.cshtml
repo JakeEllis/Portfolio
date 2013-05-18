@@ -1,0 +1,41 @@
+﻿@model Assignment7_JE.Models.URLmodel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@Html.TextBoxFor(model => model.JSON_URL)
+<input id="btnGetURL" name="btnGetURL" type="button" value="Get URL" />
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" >        
+      $(document).ready(function () {
+          $('#btnGetURL').click(function ()
+          {
+              $.ajax("/Home/GetURL",
+                  {
+                      Url: URL,
+                      Type: "GET",
+                      datatype: "json",
+                      success: function (data) {
+                          $("#Result").html(data);
+
+                      }
+                  },
+                      function (data) {
+
+                          var div = $('#Results');
+                          console.log(div);
+                      });
+          });
+      });
+          
+</script>
+
+<div class="Results">
+    
+</div>
